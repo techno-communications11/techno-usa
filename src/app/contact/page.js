@@ -135,7 +135,7 @@ const Page = () => {
     setSuccess(false);
 
     try {
-      const response = await fetch("https://techno-usa.vercel.app/api/send-email", {
+      const response = await fetch("/api/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
