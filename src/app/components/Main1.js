@@ -172,11 +172,10 @@ function Main1() {
                 transition={{ delay: 0.4 }}
                 className="mt-6 text-lg text-gray-600 leading-relaxed"
               >
-                Our extensive reach ensures we &apos; re always close to our
-                customers, providing convenience and accessibility across the
-                nation. With stores in major cities and suburban areas, we
-                &apos;re committed to bringing our services to communities
-                everywhere.
+                Our extensive reach ensures we’re always 
+                close to our customers—offering convenience and accessibility 
+                across the nation. With stores located in major cities and suburban areas,
+                 we’re committed to serving communities everywhere with reliable and friendly service.
               </motion.p>
 
               {/* Button with enhanced hover effect */}

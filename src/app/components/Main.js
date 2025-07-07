@@ -71,10 +71,7 @@ function Main() {
           </span>
         </motion.h1>
         <motion.p style={{fontWeight:900}}   className=" text-6xl fw-bolder bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent p-2"> #1 Dealer for Metro by T-mobile</motion.p>
-        <motion.p className=" text-1xl  bg-gradient-to-r from-gray-600 to-gray-600 bg-clip-text text-transparent">Techno communication LLc is leading the wireless industry 
-            <br/> by focusing  and specializing in Metro by T-Mobile.
-            <br/> With over 350+, stores in 15
-            <br/> markets and growing.</motion.p>
+        <motion.p className=" text-1xl  bg-gradient-to-r from-gray-600 to-gray-600 bg-clip-text text-transparent">Techno Communications proudly operates the largest network of Metro by T-Mobile stores across the USA.</motion.p>
         <motion.div 
          
           whileHover={{ scale: 1.03 }}

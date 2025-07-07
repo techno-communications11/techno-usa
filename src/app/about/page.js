@@ -50,12 +50,9 @@ export default function page() {
             </h2>
 
             <p>
-              Techno Communications LLC is a Texas-based, results-oriented
-              company with a passion for excellence in sales and execution.
-              Ranked in the{" "}
-              <span className="font-semibold text-blue-600">TOP 10</span> as the
-              largest Metro by T-Mobile authorized dealer, we have demonstrated
-              our ability to pivot and execute with precision.
+              Techno Communications LLC is a leading franchise partner in
+               the wireless industry, proudly specializing in Metro by T-Mobile. With over 350 stores across 15 markets and 
+              continuing to grow, we are dedicated to delivering excellent customer service and dependable connectivity.
             </p>
             <p>
               Our journey began with a single store when Metro launched in 2013
@@ -83,7 +80,7 @@ export default function page() {
               .
             </p>
             <p>
-              We are dedicated to achieving continuous results, conquering new
+              We are dedicated to achieving consistent results, conquering new
               markets, and maintaining our position in the top 10 as the largest
               dealer.
             </p>

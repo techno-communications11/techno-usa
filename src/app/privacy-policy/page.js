@@ -99,8 +99,7 @@ const PrivacyPolicy = () => {
               <div>
                 <h2 className="text-xl font-bold text-pink-700 mb-3">Third-Party Links</h2>
                 <p className="text-gray-700">
-                  Our website or services may include links to third-party sites,  We are not responsible for their privacy practices or content.
-                </p>
+Our website or services may include links to third-party sites. We are not responsible for their privacy practices or content.                </p>
               </div>
               
               

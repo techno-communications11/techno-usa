@@ -42,11 +42,8 @@ function Footer() {
               transition={{ type: "spring", stiffness: 300 }}
             />
             <p className='text-gray-400 mt-3'>
-              Techno Communications LLC is a Texas-based, results-oriented
-              company with a passion for excellence in sales and execution.
-              Ranked in the{" "}
-              <span className="font-semibold text-blue-600">TOP 10</span> as the
-              largest Metro by T-Mobile authorized dealer.
+              Techno Communications LLC is a leading franchise partner in the wireless industry, proudly specializing in Metro by T-Mobile. With over 350 stores across 15 markets and continuing to grow, 
+              we are dedicated to delivering excellent customer service and dependable connectivity.
             </p>
             <motion.button 
               className="text-blue-400 hover:text-blue-300 font-medium mt-2"
@@ -84,17 +81,7 @@ function Footer() {
                   Services
                 </motion.a>
               </motion.li>
-              {/* <motion.li whileHover={{ x: 5 }}>
-                <motion.a
-                  onClick={() => handleNavigation('/locations')}
-                  className="cursor-pointer"
-                  variants={linkVariants}
-                  whileHover="hover"
-                  whileTap="tap"
-                >
-                  Locations
-                </motion.a>
-              </motion.li> */}
+             
             </ul>
           </div>
 
@@ -138,48 +125,10 @@ function Footer() {
           <div className="mb-4 md:mb-0 text-gray-400 text-sm">
             <p>© 2010 6464 Savoy Dr Suite 215</p>
             <p>info@techno-communications.com</p>
-            <p>Phone: +1(346) 487-7627</p>
+            <p>Phone: +1(713) 640-5426</p>
           </div>
 
-          {/* Social Icons */}
-          <div className="flex space-x-4">
-            <motion.a 
-              href="https://facebook.com" 
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ y: -3, color: "#3b5998" }}
-              className="text-gray-400"
-            >
-              <FaFacebook size={20} />
-            </motion.a>
-            <motion.a 
-              href="https://twitter.com" 
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ y: -3, color: "#1DA1F2" }}
-              className="text-gray-400"
-            >
-              <FaTwitter size={20} />
-            </motion.a>
-            <motion.a 
-              href="https://linkedin.com" 
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ y: -3, color: "#0077B5" }}
-              className="text-gray-400"
-            >
-              <FaLinkedin size={20} />
-            </motion.a>
-            <motion.a 
-              href="https://instagram.com" 
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ y: -3, color: "#E1306C" }}
-              className="text-gray-400"
-            >
-              <FaInstagram size={20} />
-            </motion.a>
-          </div>
+         
         </div>
 
         {/* Copyright */}
