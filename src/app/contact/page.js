@@ -301,7 +301,7 @@ const Page = () => {
               <div className="space-y-4">
                 <p className="flex items-center gap-3">
                   <FaPhone className="text-blue-300 flex-shrink-0" /> 
-                  <span className="text-blue-100">+1 (626) 416-3666</span>
+                  <span className="text-blue-100">+1(713) 640-5426</span>
                 </p>
                 <p className="flex items-center gap-3">
                   <FaEnvelope className="text-blue-300 flex-shrink-0" /> 
