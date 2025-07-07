@@ -1,120 +1,137 @@
-"use client"
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRouter } from 'next/navigation';
+"use client";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 function Main() {
   const scrollRef = useRef(null);
   const router = useRouter();
-  
-  // Enhanced scroll animations
+
+  // Scroll animations
   const { scrollYProgress } = useScroll({
     target: scrollRef,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
-  
-  const y = useTransform(scrollYProgress, [0, 1], [0, -80]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.9, 1]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.03]);
 
-  // Smoother animation variants
+  const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.95, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.02]);
+
+  // Animation variants
   const textVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { 
-        duration: 0.8, 
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
         ease: [0.16, 1, 0.3, 1],
-        staggerChildren: 0.15
-      } 
+        staggerChildren: 0.1,
+      },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 25 },
-    visible: { 
-      opacity: 1, 
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { 
-        duration: 0.6,
-        ease: [0.16, 1, 0.3, 1]
-      }
-    }
+      transition: {
+        duration: 0.5,
+        ease: [0.16, 1, 0.3, 1],
+      },
+    },
   };
 
   const handleClick = () => {
-    router.push('/about');
+    router.push("/about");
   };
 
   return (
-    <motion.main 
-      className="container mx-auto px-6 lg:px-12 py-10 md:py-12 min-h-[90vh] flex flex-col md:flex-row items-center justify-between gap-16"
+    <motion.main
+      className="container mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-10 lg:py-16 min-h-[80vh] flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 lg:gap-16"
       ref={scrollRef}
       style={{ opacity }}
     >
       {/* Text Content Section */}
       <motion.div
-        className="w-full md:w-1/2 space-y-8 md:pr-10"
+        className="w-full lg:w-1/2 space-y-3 sm:space-y-4 lg:space-y-6 lg:pr-8"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.3 }}
         variants={textVariants}
       >
-        <motion.h1 
-          className="text-5xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight tracking-tight"
+        <motion.p
+          className="text-lg sm:text-xl md:text-2xl lg:text-7xl font-semibold text-gray-900 whitespace-nowrap overflow-hidden text-ellipsis"
           variants={itemVariants}
         >
-          Welcome to <br/> 
+          Welcome to
+        </motion.p>
+        <motion.h1
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight whitespace-nowrap overflow-hidden text-ellipsis"
+          variants={itemVariants}
+        >
           <span className="bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
             Techno Communications LLC
           </span>
         </motion.h1>
-        <motion.p style={{fontWeight:900}}   className=" text-6xl fw-bolder bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent p-2"> #1 Dealer for Metro by T-mobile</motion.p>
-        <motion.p className=" text-1xl  bg-gradient-to-r from-gray-600 to-gray-600 bg-clip-text text-transparent">Techno Communications proudly operates the largest network of Metro by T-Mobile stores across the USA.</motion.p>
-        <motion.div 
-         
-          whileHover={{ scale: 1.03 }}
-          whileTap={{ scale: 0.98 }}
-         
+        <motion.p
+          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent whitespace-nowrap overflow-hidden text-ellipsis"
+          variants={itemVariants}
         >
-          <button 
+          #1 Dealer for Metro by T-Mobile
+        </motion.p>
+        <motion.p
+          className="text-base sm:text-lg md:text-xl text-gray-600"
+          variants={itemVariants}
+        >
+          Techno Communications proudly operates the largest network of Metro by
+          T-Mobile stores across the USA.
+        </motion.p>
+        <motion.div
+          className="mt-6"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          variants={itemVariants}
+        >
+          <button
             onClick={handleClick}
-             style={{cursor: 'pointer'}}
-            className="mt-8 px-10 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:brightness-110"
+            style={{ cursor: "pointer" }}
+            className="px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-base sm:text-lg font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:brightness-110"
+            aria-label="Learn more about Techno Communications"
           >
             Discover Our Story →
           </button>
         </motion.div>
       </motion.div>
 
-      {/* Image Section with Enhanced Effects */}
-      <motion.div 
-        className="w-full md:w-1/2 flex justify-center relative"
+      {/* Image Section */}
+      <motion.div
+        className="w-full lg:w-1/2 flex justify-center relative mt-8 lg:mt-0"
         style={{ y, scale }}
       >
         <motion.div
-          className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl opacity-20 blur-xl -z-10"
+          className="absolute - inset-3 sm:-inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl opacity-15 blur-lg -z-10"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 0.2 }}
-          transition={{ duration: 1 }}
+          whileInView={{ opacity: 0.15 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         />
-        <motion.img 
-          src='home_metro.png' 
+        <motion.img
+          src="/home_metro.png"
           alt="Metro by T-Mobile stores"
-          className="w-full max-w-2xl rounded-2xl"
-          initial={{ opacity: 0, x: 80, rotate: -2 }}
+          className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-2xl rounded-2xl object-cover"
+          initial={{ opacity: 0, x: 60, rotate: -1 }}
           whileInView={{ opacity: 1, x: 0, rotate: 0 }}
-          transition={{ 
-            duration: 0.8,
-            ease: [0.16, 1, 0.3, 1]
+          transition={{
+            duration: 0.7,
+            ease: [0.16, 1, 0.3, 1],
           }}
           viewport={{ once: true }}
         />
       </motion.div>
     </motion.main>
-  )
+  );
 }
 
 export default Main;

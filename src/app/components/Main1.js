@@ -4,115 +4,113 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 function Main1() {
-
-
-  // Enhanced animation variants
+  // Animation variants
   const fadeIn = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8,
-        ease: [0.25, 0.1, 0.25, 1.0], // Custom easing
+        duration: 0.7,
+        ease: [0.25, 0.1, 0.25, 1.0],
       },
     },
   };
 
   const slideInLeft = {
-    hidden: { opacity: 0, x: -50 },
+    hidden: { opacity: 0, x: -30 },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.7,
+        duration: 0.6,
         type: "spring",
-        stiffness: 70,
+        stiffness: 80,
+        damping: 12,
       },
     },
   };
 
   const slideInRight = {
-    hidden: { opacity: 0, x: 50 },
+    hidden: { opacity: 0, x: 30 },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.7,
+        duration: 0.6,
         type: "spring",
-        stiffness: 70,
+        stiffness: 80,
+        damping: 12,
       },
     },
   };
 
   const scaleUp = {
-    hidden: { opacity: 0, scale: 0.9 },
+    hidden: { opacity: 0, scale: 0.95 },
     visible: {
       opacity: 1,
       scale: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.5,
         type: "spring",
         stiffness: 100,
-        damping: 10,
+        damping: 12,
       },
     },
   };
 
-
-
   return (
-    <div className="w-full bg-gradient-to-b from-white via-blue-50/20 to-gray-50 py-16 md:py-12 overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-8">
+    <div className="w-full bg-gradient-to-b from-white via-blue-50/20 to-gray-50 py-8 sm:py-12 lg:py-16 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Text Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Map Image with Enhanced Animation */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+          {/* Map Image with Animation */}
           <motion.div
             variants={fadeIn}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="relative mb-8 w-full order-2 lg:order-1"
+            viewport={{ once: true, margin: "-50px" }}
+            className="relative w-full order-2 lg:order-1 mb-6 sm:mb-8"
           >
             <motion.div
-              className="absolute -inset-4  from-blue-200/30 to-purple-200/30 rounded-2xl blur-lg -z-10"
+              className="absolute -inset-3 sm:-inset-4 bg-gradient-to-r from-blue-200/30 to-purple-200/30 rounded-2xl blur-lg -z-10"
               animate={{
-                opacity: [0.5, 0.8, 0.5],
+                opacity: [0.4, 0.6, 0.4],
                 scale: [0.98, 1.01, 0.98],
               }}
               transition={{
-                duration: 5,
+                duration: 4,
                 repeat: Infinity,
                 repeatType: "reverse",
               }}
             />
-            <div className=" overflow-hidden relative">
-              <div className="absolute inset-0  to-transparent z-10" />
+            <div className="relative overflow-hidden">
               <Image
                 src="/imagestore.jpg"
                 alt="Techno Communications Global LLC Logo"
-                width={600} // set to actual width in pixels
-                height={600} // set to actual height in pixels
+                width={600}
+                height={600}
+                className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-[600px] h-auto rounded-2xl object-cover mx-auto"
+                priority
               />
-              
             </div>
           </motion.div>
 
-          {/* Text Content with Enhanced Animations */}
+          {/* Text Content with Animations */}
           <motion.div
             variants={slideInRight}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-50px" }}
             className="flex flex-col order-1 lg:order-2"
           >
-            <div className="flex flex-col">
-              {/* Numbers with enhanced animation and styling */}
-              <div className="relative mb-8">
+            <div className="flex flex-col space-y-4 sm:space-y-6">
+              {/* Numbers with animation and styling */}
+              <div className="relative mb-6 sm:mb-8">
                 <motion.div
-                  className="absolute -inset-6 bg-blue-100/30 rounded-3xl blur-lg -z-10"
+                  className="absolute -inset-4 sm:-inset-6 bg-blue-100/20 rounded-3xl blur-lg -z-10"
                   animate={{
-                    opacity: [0.3, 0.5, 0.3],
+                    opacity: [0.2, 0.4, 0.2],
                   }}
                   transition={{
                     duration: 3,
@@ -120,66 +118,50 @@ function Main1() {
                     repeatType: "reverse",
                   }}
                 />
-
                 <motion.div
                   variants={scaleUp}
-                  className="text-7xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent leading-tight"
-                  animate={{
-                    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-                  }}
-                  transition={{
-                    duration: 8,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  }}
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent leading-tight whitespace-nowrap overflow-hidden text-ellipsis"
                 >
                   15 Markets &
                 </motion.div>
-
                 <motion.div
                   variants={scaleUp}
                   transition={{ delay: 0.2 }}
-                  className="text-7xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent leading-tight"
-                  animate={{
-                    backgroundPosition: ["100% 50%", "0% 50%", "100% 50%"],
-                  }}
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent leading-tight whitespace-nowrap overflow-hidden text-ellipsis"
                 >
                   350+ Stores
                 </motion.div>
               </div>
 
-              {/* Heading with enhanced animation */}
+              {/* Heading with animation */}
               <motion.h1
                 variants={slideInLeft}
                 transition={{ delay: 0.3 }}
-                className="text-4xl font-bold text-gray-700 leading-tight"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-700 leading-tight"
               >
                 We Have the Largest Network
-                <br className="hidden lg:block" />
-                of Stores in USA
+                <br className="hidden sm:block lg:hidden" />
+                <span className="block">of Stores in USA</span>
                 <motion.div
-                  className="h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-500 mt-4 rounded-full"
+                  className="h-1 w-16 sm:w-20 bg-gradient-to-r from-blue-500 to-purple-500 mt-3 sm:mt-4 rounded-full"
                   initial={{ width: 0 }}
                   whileInView={{ width: 80 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.6, duration: 0.8 }}
+                  transition={{ delay: 0.6, duration: 0.7 }}
                 />
               </motion.h1>
 
-              {/* Description with enhanced animation */}
+              {/* Description with animation */}
               <motion.p
                 variants={fadeIn}
                 transition={{ delay: 0.4 }}
-                className="mt-6 text-lg text-gray-600 leading-relaxed"
+                className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed"
               >
-                Our extensive reach ensures we’re always 
-                close to our customers—offering convenience and accessibility 
-                across the nation. With stores located in major cities and suburban areas,
-                 we’re committed to serving communities everywhere with reliable and friendly service.
+                Our extensive reach ensures we’re always close to our customers—offering
+                convenience and accessibility across the nation. With stores located in
+                major cities and suburban areas, we’re committed to serving communities
+                everywhere with reliable and friendly service.
               </motion.p>
-
-              {/* Button with enhanced hover effect */}
-             
             </div>
           </motion.div>
         </div>
