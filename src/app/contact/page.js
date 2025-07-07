@@ -55,8 +55,8 @@ const Page = () => {
     {
       icon: <FaPhone className="text-2xl text-purple-600" />,
       title: "Phone Number",
-      info: "+1 (346) 487-7627",
-      link: "tel:+13464877627",
+      info: "+1(713) 640-5426",
+      link: "tel:+17136405426",
     },
     {
       icon: <FaEnvelope className="text-2xl text-blue-600" />,
