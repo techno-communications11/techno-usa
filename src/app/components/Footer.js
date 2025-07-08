@@ -42,8 +42,7 @@ function Footer() {
               transition={{ type: "spring", stiffness: 300 }}
             />
             <p className='text-gray-400 mt-3'>
-              Techno Communications LLC is a leading franchise partner in the wireless industry, proudly specializing in Metro by T-Mobile. With over 350 stores across 15 markets and continuing to grow, 
-              we are dedicated to delivering excellent customer service and dependable connectivity.
+              Techno Communications LLC is a leading franchise partner in the wireless industry, proudly specializing in Metro by T-Mobile. With a growing number of stores across the USA, we are committed to delivering exceptional customer service and reliable connectivity.
             </p>
             <motion.button 
               className="text-blue-400 hover:text-blue-300 font-medium mt-2"

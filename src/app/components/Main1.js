@@ -105,39 +105,13 @@ function Main1() {
             className="flex flex-col order-1 lg:order-2"
           >
             <div className="flex flex-col space-y-4 sm:space-y-6">
-              {/* Numbers with animation and styling */}
-              <div className="relative mb-6 sm:mb-8">
-                <motion.div
-                  className="absolute -inset-4 sm:-inset-6 bg-blue-100/20 rounded-3xl blur-lg -z-10"
-                  animate={{
-                    opacity: [0.2, 0.4, 0.2],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  }}
-                />
-                <motion.div
-                  variants={scaleUp}
-                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent leading-tight whitespace-nowrap overflow-hidden text-ellipsis"
-                >
-                  15 Markets &
-                </motion.div>
-                <motion.div
-                  variants={scaleUp}
-                  transition={{ delay: 0.2 }}
-                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent leading-tight whitespace-nowrap overflow-hidden text-ellipsis"
-                >
-                  350+ Stores
-                </motion.div>
-              </div>
+                
 
               {/* Heading with animation */}
               <motion.h1
                 variants={slideInLeft}
                 transition={{ delay: 0.3 }}
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-700 leading-tight"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-7xl font-bold text-gray-700 leading-tight"
               >
                 We Have the Largest Network
                 <br className="hidden sm:block lg:hidden" />

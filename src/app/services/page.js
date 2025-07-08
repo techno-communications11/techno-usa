@@ -13,16 +13,11 @@ const Services = () => {
       title: "Mobile Phones & Accessories Dealers",
       description: "We offer the latest smartphones and premium accessories from top brands at competitive prices."
     },
-    {
-      id: 2,
-      icon: <FaStore className="text-4xl text-purple-600" />,
-      title: "Large Number of Stores in USA (350+)",
-      description: "With over 350 locations across 15+ markets, we're never far from serving your wireless needs."
-    },
+    
     {
       id: 3,
       icon: <FaShieldAlt className="text-4xl text-blue-600" />,
-      title: "Authorized Dealer of Metro by T-Mobile",
+      title: "Authorized Dealer of Metro by  T-Mobile",
       description: "As a top authorized dealer, we provide exclusive deals and premium support for Metro by T-Mobile services."
     },
     {
@@ -81,7 +76,7 @@ const Services = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
         >
           {services.map((service) => (
             <motion.div
@@ -93,7 +88,7 @@ const Services = () => {
               <div className="flex justify-center mb-6">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3 text-center">
+              <h3 className="text-2xl font-bold text-gray-800 mb-3 text-center">
                 {service.title}
               </h3>
               <p className="text-gray-600 text-center">

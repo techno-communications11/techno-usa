@@ -74,39 +74,33 @@ export default function Page() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradientto-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Techno Communications LLC
             </h2>
-            <p>
-              Techno Communications LLC is a leading franchise partner in the
-              wireless industry, proudly specializing in Metro by T-Mobile. With
-              over 350 stores across 15 markets and continuing to grow, we are
-              dedicated to delivering excellent customer service and dependable
-              connectivity.
-            </p>
-            <p>
-              Our journey began with a single store when Metro launched in 2013 in
-              Houston. Through strategic planning and continuous development, we
-              now operate as the largest Metro by T-Mobile authorized dealer in{" "}
-              <span className="font-semibold text-blue-600">15 markets</span>,
-              with{" "}
-              <span className="font-semibold text-blue-600">
-                350+ directly owned and operated stores
-              </span>.
-            </p>
-            <p>
-              Our unique sales culture, combined with an unwavering commitment to
-              quality, sets us apart. We stand by always doing things the right
-              way, guided by our core values of{" "}
-              <span className="font-semibold text-purple-600">integrity</span>,{" "}
-              <span className="font-semibold text-purple-600">transparency</span>,
-              and{" "}
-              <span className="font-semibold text-purple-600">
-                customer commitment
-              </span>.
-            </p>
-            <p>
-              We are dedicated to achieving consistent results, conquering new
-              markets, and maintaining our position in the top 10 as the largest
-              dealer.
-            </p>
+         <p>
+  Techno Communications LLC is a leading franchise partner in the
+  wireless industry, proudly specializing in Metro by T-Mobile. With
+  a growing number of stores across the USA, we are committed to
+  delivering exceptional customer service and reliable connectivity.
+</p>
+<p>
+  Our journey began with a single store when Metro launched in 2013 in
+  Houston. Through strategic planning and continuous development, we
+  have grown to become the largest authorized dealer for Metro by T-Mobile.
+</p>
+<p>
+  Our unique sales culture, combined with an unwavering commitment to
+  quality, sets us apart. We are driven by a philosophy of doing
+  things the right way—guided by our core values of{" "}
+  <span className="font-semibold text-purple-600">integrity</span>,{" "}
+  <span className="font-semibold text-purple-600">transparency</span>, and{" "}
+  <span className="font-semibold text-purple-600">
+    customer commitment
+  </span>.
+</p>
+<p>
+  We are focused on achieving consistent results, expanding into new
+  markets, and maintaining our position among the top  dealers
+  nationwide.
+</p>
+
           </motion.div>
         </div>
       </div>
