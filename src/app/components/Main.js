@@ -59,7 +59,7 @@ function Main() {
     <>
       <main
         ref={mainRef}
-        className="w-full bg-white pt-0 pb-0 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col lg:flex-row items-start justify-start lg:items-center lg:justify-between gap-4 sm:gap-6 md:gap-8 lg:gap-10 relative overflow-hidden"
+        className="w-full bg-white pt-5 pb-0 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col lg:flex-row items-start justify-start lg:items-center lg:justify-between gap-4 sm:gap-6 md:gap-8 lg:gap-10 relative overflow-hidden"
       >
         {/* Enhanced Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/10 via-transparent to-purple-50/10 pointer-events-none"></div>
@@ -81,7 +81,7 @@ function Main() {
             </p>
             
             <h1
-              className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 tracking-tight leading-tight transform transition-all duration-700 ease-out ${
+              className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-gray-900 tracking-tight leading-tight transform transition-all duration-700 ease-out ${
                 isVisible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-4 opacity-0"
