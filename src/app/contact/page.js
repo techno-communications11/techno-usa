@@ -44,27 +44,27 @@ const Page = () => {
   const [success, setSuccess] = useState(false);
   const [toast, setToast] = useState({ message: "", type: "", visible: false });
 
-  const contactMethods = [
-    {
-      icon: <FaMapMarkerAlt className="text-2xl text-blue-600" />,
-      title: "Our Headquarters",
-      info: "6464 Savoy Dr, Suite 215, Houston, TX 77036",
-      link: "https://goo.gl/maps/6m2abb9adf339d56",
-    },
-    {
-      icon: <FaPhone className="text-2xl text-purple-600" />,
-      title: "Phone Number",
-      info: "+1(713) 640-5426",
-      link: "tel:+17136405426",
-    },
-    {
-      icon: <FaEnvelope className="text-2xl text-blue-600" />,
-      title: "Email Address",
-      info: "info@techno-communications.com",
-      link: "mailto:info@techno-communications.com",
-    },
+  // const contactMethods = [
+  //   {
+  //     icon: <FaMapMarkerAlt className="text-2xl text-blue-600" />,
+  //     title: "Our Headquarters",
+  //     info: "6464 Savoy Dr, Suite 215, Houston, TX 77036",
+  //     link: "https://goo.gl/maps/6m2abb9adf339d56",
+  //   },
+  //   {
+  //     icon: <FaPhone className="text-2xl text-purple-600" />,
+  //     title: "Phone Number",
+  //     info: "+1(713) 640-5426",
+  //     link: "tel:+17136405426",
+  //   },
+  //   {
+  //     icon: <FaEnvelope className="text-2xl text-blue-600" />,
+  //     title: "Email Address",
+  //     info: "info@techno-communications.com",
+  //     link: "mailto:info@techno-communications.com",
+  //   },
     
-  ];
+  // ];
 
   const subBranches = [
     {
@@ -268,18 +268,18 @@ const Page = () => {
           </div>
         </motion.div>
 
-        {/* Headquarters Section */}
+        {/* Headquarters Section
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-3 font-serif">
             Our Headquarters
           </h2>
           <p className="text-gray-600 mb-6">
             Visit us at our main office in Houston, Texas
-          </p>
+          </p>f
           <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
-        </div>
+        </div> */}
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
+        {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -334,7 +334,7 @@ const Page = () => {
               </motion.div>
             ))}
           </motion.div>
-        </div>
+        </div> */}
 
         {/* Contact Form Section */}
         <div className="text-center mb-12">
@@ -377,7 +377,7 @@ const Page = () => {
                 <div className="flex items-center gap-3">
                   <Clock className="text-blue-300 flex-shrink-0" />
                   <span className="text-blue-100">
-                    Mon-Fri: 9:00 AM - 6:00 PM CST
+                    Mon-Fri: 10:00 AM - 7:00 PM CST
                   </span>
                 </div>
               </div>
